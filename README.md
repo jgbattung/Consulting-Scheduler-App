@@ -12,3 +12,4 @@
 * Through the boooking link, Users can view a list of consultations offered by a Consultant
 * Users can select a consultation they wish to get, enter their personal information and provide their payment details (if necessary)
 * Users do not have to register for an account to book a consultation
+* For now, paid consultations can only be booked and paid for by US citizens
