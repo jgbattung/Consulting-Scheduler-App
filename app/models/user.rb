@@ -7,4 +7,6 @@ has_person_name
          :recoverable, :rememberable, :validatable
 
   has_many :consultation_types
+
+  validates :consultation_link, presence: true
 end
