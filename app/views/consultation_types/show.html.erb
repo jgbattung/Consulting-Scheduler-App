@@ -1,0 +1,49 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Consultation_type</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to consultation_types_path, class: button_class(theme: "transparent") do %>
+      All Consultation_types
+      <% end %>
+      <%= link_to edit_consultation_type_path(@consultation_type), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Name:</p>
+        <p><%= @consultation_type.name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Location:</p>
+        <p><%= @consultation_type.location %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Description:</p>
+        <p><%= @consultation_type.description %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Color:</p>
+        <p><%= @consultation_type.color %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Duration:</p>
+        <p><%= @consultation_type.duration %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Payment required:</p>
+        <p><%= @consultation_type.payment_required %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Price:</p>
+        <p><%= @consultation_type.price %></p>
+      </li>
+      <li>
+        <p class="font-semibold">User:</p>
+        <p><%= @consultation_type.user %></p>
+      </li>
+  </ul>
+</div>
