@@ -1,1 +1,70 @@
-<h1>DASHBOARD</h1>
+<div class="container mx-auto px-4 pb-32">
+	<div class="flex items-center justify-between pb-6 border-b">
+		<h1 class="font-extrabold text-3xl">Dashboard</h1>
+		<%= link_to "Create a Consultation", new_consultation_type_path, class: button_class(theme: "primary") %>
+	</div>
+
+	<div class="py-10 grid grid-cols-3 gap-6">
+		<% render @consultation_types %>
+	</div>
+
+	<% if @consultations.pending.any? %>
+		<h3 class="font-bold text-2xl mb-6 mt-10 pt-10 border-t border-slate-2">Pending Consultations</h3>
+
+		<table class="w-full table-collapse">
+			<thead>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Status</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Name</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Email</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Starts</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Consultation Type</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Premium</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Paid</th>
+			</thead>
+
+			<tbody>
+				<%= render @consultations.pending %>
+			</tbody>
+		</table>
+	<% end %>
+
+	<% if @consultations.approved.any? %>
+		<h3 class="font-bold text-2xl mb-6 mt-10 pt-10 border-t border-slate-2">Pending Consultations</h3>
+
+		<table class="w-full table-collapse">
+			<thead>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Status</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Name</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Email</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Starts</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Consultation Type</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Premium</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Paid</th>
+			</thead>
+
+			<tbody>
+				<%= render @consultations.approved %>
+			</tbody>
+		</table>
+	<% end %>
+
+	<% if @consultations.unapproved.any? %>
+		<h3 class="font-bold text-2xl mb-6 mt-10 pt-10 border-t border-slate-2">Pending Consultations</h3>
+
+		<table class="w-full table-collapse">
+			<thead>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Status</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Name</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Email</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Starts</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Consultation Type</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Premium</th>
+				<th class="border border-teal-700 p-3 text-left bg-teal-50">Paid</th>
+			</thead>
+
+			<tbody>
+				<%= render @consultations.unapproved %>
+			</tbody>
+		</table>
+	<% end %>
+</div>
