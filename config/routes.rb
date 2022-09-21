@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :consultation_types
-  resources :consultations
+  resources :consultations, except: :index
 
   get ":consultation_link", to: "users#show", as: :user
 

@@ -2,15 +2,15 @@ class ConsultationsController < ApplicationController
   before_action :set_consultation, only: %i[ show edit update destroy ]
 
   # GET /consultations or /consultations.json
-  def index
-    @consultations = Consultation.all
-  end
+  # def index
+  #   @consultations = Consultation.all
+  # end
 
   # GET /consultations/1 or /consultations/1.json
   def show
   end
 
-  # GET /consultations/new
+# GET /consultations/new
   def new
     @consultation = Consultation.new
   end
@@ -25,7 +25,7 @@ class ConsultationsController < ApplicationController
 
     respond_to do |format|
       if @consultation.save
-        format.html { redirect_to consultation_url(@consultation), notice: "Consultation was successfully created." }
+        format.html { redirect_to root_url, notice: "Consultation was successfully created." }
         format.json { render :show, status: :created, location: @consultation }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +65,6 @@ class ConsultationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def consultation_params
-      params.require(:consultation).permit(:status, :first_name, :last_name, :email, :start_at, :end_at)
+      params.require(:consultation).permit(:consultation_type_id, :status, :name, :email, :start_at, :end_at, :notes)
     end
 end
