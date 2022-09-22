@@ -13,9 +13,13 @@ Rails.application.routes.draw do
   end
 
   resources :consultation_types
-  resources :consultations, except: :index
+  resources :consultations, except: [:index, :new]
 
   get ":consultation_link", to: "users#show", as: :user
+
+  scope "/:consultation_link", as: :user do
+    resources :consultations, only: [:index, :new]
+  end
 
   root to: 'home#index'
 end
