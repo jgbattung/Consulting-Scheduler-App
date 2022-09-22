@@ -1,5 +1,5 @@
 <div id="<%= dom_id consultation_type %>">
-   <%= link_to new_user_consultation_path(consultation_link: @user.consultation_link, consultation_type: consultation_type.name.parameterize), class: "p-6 border shadow-xl rounded-xl block hover:shadow-lg transition ease-in duration-300 relative overflow-hidden" do %>
+   <%= link_to new_user_consultation_path(consultation_link: @user.consultation_link, consultation_type: consultation_type.name), class: "p-6 border shadow-xl rounded-xl block hover:shadow-lg transition ease-in duration-300 relative overflow-hidden" do %>
     <div class="h-1 w-full absolute top-0 left-0 right-0" style="background-color: <%= consultation_type.color %>"></div>
     <h3 class="font-medium text-2xl"><%= consultation_type.name %></h3>
     <p class="text-gray-500">View consultation page</p>

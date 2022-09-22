@@ -13,6 +13,7 @@ class ConsultationsController < ApplicationController
 # GET /consultations/new
   def new
     @consultation = Consultation.new
+    @consultation_type = ConsultationType.find_by(name: params[:consultation_type])
   end
 
   # GET /consultations/1/edit
