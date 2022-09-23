@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :consultation_types
   resources :consultations, except: [:index, :new]
 
+  post "payment-intent", to: "consultations#intent"
   get ":consultation_link", to: "users#show", as: :user
 
   scope "/:consultation_link", as: :user do
