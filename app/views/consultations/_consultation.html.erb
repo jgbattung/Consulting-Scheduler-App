@@ -1,7 +1,7 @@
 <tr id="<%= dom_id consultation %>">
   <td class="border border-teal-300 bg-white text-left p-4">
     <% form_with(model: consultation, method: :patch) do |form| %>
-      <% form.select :status, options_for_select(Consultation.statuses.map { |key, value| [key.capitalize, key] }, form.object.status, {}, {class: input_class, onchange: "this.form.submit()"}) %>
+      <% form.select :status, options_for_select(Consultation.statuses.map { |key, value| [key.capitalize, key] }, form.object.status), {}, {class: input_class, onchange: "this.form.submit()"} %>
     <% end %>
   </td>
   <td class="border border-teal-300 bg-white text-left p-4">
@@ -14,7 +14,7 @@
     <%= consultation.start_at.strftime("%b %e, %Y at %l:%M %p") %>
   </td>
   <td class="border border-teal-300 bg-white text-left p-4">
-    <%= consultation.end__at.strftime("%b %e, %Y at %l:%M %p") %>
+    <%= consultation.end_at.strftime("%b %e, %Y at %l:%M %p") %>
   </td>
   <td class="border border-teal-300 bg-white text-left p-4">
     <%= consultation.consultation_type.name %>
