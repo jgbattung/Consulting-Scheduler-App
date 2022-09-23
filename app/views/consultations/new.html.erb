@@ -1,10 +1,28 @@
 <div class="max-w-3xl mx-auto px-4">
   <% if @consultation_type.payment_required? %>
-    <h1 class="font-bold text-3xl mb-6">Schedule your consultation for <%= number_to_currency(@consultation_type.price) %></h1>
-    <%# stripe form here %>
+    <div
+      data-controller="payment"
+      data-payment-item-value="<%= @consultation_type.id %>"
+      data-payment-token-value="<%= form_authenticity_token %>"
+      data-payment-return-url-value="<%= root_url %>"
+    >
+      <h1 class="font-bold text-3xl mb-6">Schedule your consultation for <%= number_to_currency(@consultation_type.price) %></h1>
+      <%# stripe form here %>
+
+      <div class="my-6">
+        <h3 class="font-bold text-xl mb-3">Enter payment details</h3>
+
+        <div id="payment-element" data-payment-target="element"></div>
+
+        <div data-payment-target="message" class="hidden"></div>
+      </div>
+
+      <%= render 'form', consultation: @consultation %>
+    </div>
   <% else %>
     <h1 class="font-bold text-3xl mb-6">Schedule your free consultation</h1>
-  <% end %></h1>
+  </h1>
 
   <%= render 'form', consultation: @consultation %>
+  <% end %>
 </div>
