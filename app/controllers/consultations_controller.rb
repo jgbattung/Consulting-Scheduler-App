@@ -23,9 +23,15 @@ class ConsultationsController < ApplicationController
   # POST /consultations or /consultations.json
   def create
     @consultation = Consultation.new(consultation_params)
+    @consultation_type = ConsultationType.find(params[:consultation][:consultation_type_id])
 
     respond_to do |format|
       if @consultation.save
+
+        unless @consultation_type.payment_required?
+          @consultation.approved!
+        end
+
         format.html { redirect_to root_url, notice: "Consultation was successfully created." }
         format.json { render :show, status: :created, location: @consultation }
       else

@@ -22,5 +22,7 @@ Rails.application.routes.draw do
     resources :consultations, only: [:index, :new]
   end
 
+  resources :webhooks, only: :create
+
   root to: 'home#index'
 end
