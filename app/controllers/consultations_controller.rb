@@ -45,7 +45,7 @@ class ConsultationsController < ApplicationController
   def update
     respond_to do |format|
       if @consultation.update(consultation_params)
-        format.html { redirect_to consultation_url(@consultation), notice: "Consultation was successfully updated." }
+        format.html { redirect_to root_path, notice: "Consultation was successfully updated." }
         format.json { render :show, status: :ok, location: @consultation }
       else
         format.html { render :edit, status: :unprocessable_entity }
