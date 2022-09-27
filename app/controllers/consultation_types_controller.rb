@@ -25,7 +25,7 @@ class ConsultationTypesController < ApplicationController
 
     respond_to do |format|
       if @consultation_type.save
-        format.html { redirect_to root_path, notice: "Consultation was successfully created." }
+        format.html { redirect_to root_path, notice: "Your consultation was successfully scheduled" }
         format.json { render :show, status: :created, location: @consultation_type }
       else
         format.html { render :new, status: :unprocessable_entity }
