@@ -1,1 +1,21 @@
-<h1>HOMEPAGE</h1>
+<div class="relative flex h-screen flex-row items-center justify-around bg-sky-900">
+  <div class="absolute top-0 left-0 px-20 py-10">
+    <p class="text-4xl font-black text-white">First<span class="text-4xl font-black text-sky-400">Class</span></p>
+    <p class="text-sm font-bold text-slate-200">Consult with the best in the world</p>
+  </div>
+  <div class="absolute top-0 right-0 px-20 py-10">
+		<%= link_to "Log in", new_user_session_path, class:"transition-all px-8 py-3 text-white bg-sky-300 hover:bg-sky-700 focus:outline-none focus:ring-4 focus:ring-sky-300 font-bold rounded-full text-base text-center mb-2 dark:bg-sky-500 dark:hover:bg-sky-700 dark:focus:ring-sky-900" %>
+  </div>
+  <div class="text-left w-1/2">
+    <h1 class="text-white font-bold text-7xl">Finding <span class="text-7xl font-black text-sky-400">experts</span> has never been this easy</h1>
+    <p class="text-white font-semibold text-lg mt-5">Business. Fitness. Finance. Health. Education.<br>All the support you need in one place.</p>
+    <p class="text-amber-400 font-medium text-xl pt-12 pb-10">Want to connect with clients?</p>
+		<%= link_to "Create a Consultant Account", new_user_registration_path, class:"mt-3 px-10 py-5 text-sky-800 bg-slate-200 hover:bg-sky-600 hover:text-white rounded-2xl transition-colors text-xl font-semibold" %>
+    <p class="text-white font-medium text-base pt-8">Looking for consultants?</h1><span> See our experts.</span>
+
+  </div>
+  <div>
+    <h2>IMAGE HERE</h2>
+  </div>
+  
+</div>
