@@ -1,7 +1,10 @@
-<div class="container mx-auto px-4 pb-32">
-	<div class="flex items-center justify-between pb-6 border-b">
+<div class="container mx-auto px-4 pb-32 mt-4">
+	<div class="flex items-center justify-between">
 		<h1 class="font-bold text-6xl">Consultant Dashboard</h1>
-		<%= link_to "Create a Consultation", new_consultation_type_path, class: button_class(theme: "primary") %>
+		<%= link_to "Create a Consultation", new_consultation_type_path, class: button_class(theme: "secondary") %>
+	</div>
+	<div class="pb-2 border-b-2">
+		<p class="font-semibold text-lg py-2"> Welcome back, <%= @current_user.first_name %>!<p>
 	</div>
 
 	<div class="py-10 grid grid-cols-3 gap-6">
@@ -30,7 +33,7 @@
 	<% end %>
 
 	<% if @consultations.approved.any? %>
-		<h3 class="font-bold text-2xl mb-6 mt-10 pt-10 border-t border-slate-2">Approved Consultations</h3>
+		<h3 class="font-bold text-2xl mb-6 mt-10 pt-10 border-t border-slate-2">Scheduled Consultations</h3>
 
 		<table class="w-full table-collapse">
 			<thead>

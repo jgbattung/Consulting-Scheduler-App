@@ -13,17 +13,17 @@
 
   <div class="mb-6">
     <%= form.label :name, class: label_class %>
-    <%= form.text_field :name, class: input_class %>
+    <%= form.text_field :name, class: input_class, placeholder: 'Add the title of your consultation' %>
   </div>
 
   <div class="mb-6">
     <%= form.label :location, class: label_class %>
-    <%= form.text_field :location, class: input_class %>
+    <%= form.text_field :location, class: input_class, placeholder: 'Zoom/MS Teams, face-to-face...' %>
   </div>
 
   <div class="mb-6">
     <%= form.label :description, class: label_class %>
-    <%= form.rich_text_area :description, class: input_class %>
+    <%= form.rich_text_area :description, class: input_class, placeholder: 'Add a short description of this consultation for your clients!' %>
   </div>
 
   <div class="mb-6">
@@ -33,7 +33,7 @@
 
   <div class="mb-6">
     <%= form.label :duration, class: label_class %>
-    <%= form.number_field :duration, class: input_class %>
+    <%= form.number_field :duration, class: input_class, placeholder: 'Consultation duration in minutes (e.g. 30 minutes, 90 minutes)' %>
   </div>
 
   <div class="mb-6 flex items-center space-x-2">
@@ -41,16 +41,16 @@
     <%= form.label :payment_required, class: label_class %>
   </div>
 
-  <div class="mb- lg:w-1/2">
+  <div class="mb- lg:w-1/2 mb-4">
     <%= form.label :price, class: label_class %>
-    <%= form.number_field :price, class: input_class %>
+    <%= form.number_field :price, class: input_class, placeholder: 'Price in USD($)' %>
   </div>
 
-<%= form.submit "Create Consultation", class: button_class(theme: 'primary') %>
+<%= form.submit "Create Consultation", class:button_class(theme: 'primary') %>
 
 <% if consultation_type.persisted? %>
-<%= link_to "Cancel", consultation_type, class: "text-neutral-700 underline inline-block ml-3" %>
+<%= link_to "Cancel", root_path, class: "text-neutral-700 underline inline-block ml-3" %>
 <% else %>
-<%= link_to "Cancel", consultation_types_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<%= link_to "Cancel", root_path, class:  "text-neutral-700 underline inline-block ml-3" %>
 <% end %>
 <% end %>

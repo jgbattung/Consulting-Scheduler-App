@@ -47,7 +47,7 @@ module ApplicationHelper
     when themes[:primary]
       "bg-violet-600 hover:bg-violet-700 text-white"
     when themes[:secondary]
-      "bg-sky-600 hover:bg-sky-700 text-white"
+      "bg-sky-800 hover:bg-sky-900 text-white"
     when themes[:transparent]
       "bg-transparent hover:bg-gray-100 text-gray-700"
     when themes[:dark]
