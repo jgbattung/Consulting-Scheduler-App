@@ -7,6 +7,7 @@
 		<p class="font-semibold text-lg py-2"> Welcome back, <%= @current_user.first_name %>!<p>
 	</div>
 
+	<h2 class="font-bold text-xl pt-10">Your active consultations</h2>
 	<div class="py-10 grid grid-cols-3 gap-6">
 		<%= render @consultation_types %>
 	</div>

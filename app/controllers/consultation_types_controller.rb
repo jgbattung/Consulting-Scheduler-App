@@ -38,7 +38,7 @@ class ConsultationTypesController < ApplicationController
   def update
     respond_to do |format|
       if @consultation_type.update(consultation_type_params)
-        format.html { redirect_to consultation_type_url(@consultation_type), notice: "Consultation was successfully updated." }
+        format.html { redirect_to root_path, notice: "Consultation was successfully updated." }
         format.json { render :show, status: :ok, location: @consultation_type }
       else
         format.html { render :edit, status: :unprocessable_entity }

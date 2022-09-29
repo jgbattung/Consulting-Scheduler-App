@@ -15,7 +15,10 @@
       <div><%# More links can go here %></div>
       <% if user_signed_in? %>
         <%= link_to "Edit account", edit_user_registration_path, class: "p-3 hover:bg-sky-700 hover:text-white transition ease duration-300 rounded-lg text-center focus:bg-gray-100 lg:inline-block block" %>
-        <%= button_to "Log out", destroy_user_session_path, method: :delete, class:"p-3 hover:bg-sky-700 hover:text-white transition ease duration-300 rounded-lg text-center focus:bg-gray-100 lg:inline-block block" %>
+        <%= button_to destroy_user_session_path, method: :delete, class:"p-3 hover:bg-sky-700 hover:text-white transition ease duration-300 rounded-lg text-center focus:bg-gray-100 lg:inline-block block" do %>
+          <svg class="w-6 h-6 fill-gray-700" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
+        <% end %>
       <% else %>
 		    <%= link_to "Log in", new_user_session_path, class:"transition-all px-8 py-3 text-white bg-sky-300 hover:bg-sky-700 focus:outline-none focus:ring-4 focus:ring-sky-300 font-bold rounded-full text-base text-center mb-2 dark:bg-sky-500 dark:hover:bg-sky-700 dark:focus:ring-sky-900" %>
       <% end %>
