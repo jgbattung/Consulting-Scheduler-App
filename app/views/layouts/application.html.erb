@@ -6,10 +6,7 @@
 
     <header>
       <%= render "shared/flash_notice" %>
-
-      <% if user_signed_in? && current_page?(root_path) %>
-        <%= render "shared/navbar" %>
-      <% end %>
+      <%= render "shared/navbar" %>
     </header>
 
     <main class="flex-grow">
