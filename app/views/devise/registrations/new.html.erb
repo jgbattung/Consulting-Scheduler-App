@@ -18,6 +18,11 @@
     </div>
 
     <div class="mb-6">
+      <%= f.label :specialization, class: label_class %>
+      <%= f.text_field :specialization, class: input_class %>
+    </div>
+
+    <div class="mb-6">
       <div class="flex">
         <%= f.label :password, class: label_class %>
         <% if @minimum_password_length %>
