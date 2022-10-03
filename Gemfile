@@ -76,3 +76,8 @@ gem "cssbundling-rails"
 gem "name_of_person"
 gem "sidekiq", "~> 6.5", ">= 6.5.4"
 gem "stripe"
+
+
+group :development, :test do
+  gem 'rspec-rails'
+end

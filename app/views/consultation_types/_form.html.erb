@@ -46,7 +46,7 @@
     <%= form.number_field :price, class: input_class, placeholder: 'Price in USD($)' %>
   </div>
 
-<%= form.submit "Create Consultation", class:button_class(theme: 'primary') %>
+<%= form.submit "Edit Consultation", class:button_class(theme: 'primary') %>
 
 <% if consultation_type.persisted? %>
 <%= link_to "Cancel", root_path, class: "text-neutral-700 underline inline-block ml-3" %>
