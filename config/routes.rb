@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :users, only: [:index]
+
   authenticated :user do
     root to: "home#dashboard", as: :authenticated_root
   end
