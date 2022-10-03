@@ -22,7 +22,7 @@
         <p>Name: <span class="font-bold"><%= @consultation.name %></span></p>
         <p>Email: <span class="font-bold"><%= @consultation.email %></span></p>
         <p>Consultation Schedule: <span class="text-sky-600 font-bold"><%= @consultation.start_at %></span> to <span class="text-sky-600 font-bold"><%= @consultation.end_at %></span></p>
-        <p>Consulting package: <span class="font-bold"><%= @consultation.consultation_type_id %></span></p>
+        <p>Consulting package: <span class="font-bold"><%= @consultation.consultation_type.name %></span></p>
       </div>
     </div>
   </div>
