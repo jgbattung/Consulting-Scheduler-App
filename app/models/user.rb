@@ -8,5 +8,5 @@ has_person_name
 
   has_many :consultation_types
 
-  validates :consultation_link, presence: true
+  validates :consultation_link, :specialization, presence: true
 end
