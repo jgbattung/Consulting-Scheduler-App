@@ -30,7 +30,7 @@ class ConsultationsController < ApplicationController
 
         unless @consultation_type.payment_required?
           @consultation.approved!
-          ConsultationNotificationMailer.with(user: @user).consultation_notification.deliver_now
+          ConsultationNotificationMailer.with(user: @user).consultation_notification.deliver_later
         end
 
         format.html { redirect_to root_url, notice: "Your consultation was successfully scheduled." }
