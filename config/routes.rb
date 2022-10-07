@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     root to: "home#dashboard", as: :authenticated_root
   end
 
+  get '/confirmation' => 'consultations#confirmation', as: 'confirmation'
+
   resources :consultation_types
   resources :consultations, except: [:index, :new]
 
@@ -27,4 +29,5 @@ Rails.application.routes.draw do
   resources :webhooks, only: :create
 
   root to: 'home#index'
+  
 end
