@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Hello, <%= @consultation.first_name %>!</h3>
+    <p>
+      Your consultation booking with <b>FirstClass</b> has been approved. Please see the details of your consultation below:
+    
+			<ul>
+				<li>Consultation: <%= @consultation.consultation_type.name %></li>
+				<li>Consultant: <%= @consultation.consultation_type.user.name %></li>
+				<li>Schedule: <%= @consultation.start_at %> to <%= @consultation.end_at %></li> 
+			</ul>
+			
+    </p>
+    <p>Thank you for using <b>FirstClass</b> and have a great consultation!</p>
+  </body>
+</html>

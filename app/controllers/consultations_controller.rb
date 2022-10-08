@@ -10,6 +10,10 @@ class ConsultationsController < ApplicationController
   def show
   end
 
+  def mail_confirmation
+    
+  end
+
 # GET /consultations/new
   def new
     @consultation = Consultation.new
@@ -27,12 +31,15 @@ class ConsultationsController < ApplicationController
 
     respond_to do |format|
       if @consultation.save
+        @user = @consultation.consultation_type.user
 
         unless @consultation_type.payment_required?
           @consultation.approved!
+          ConsultationNotificationMailer.with(user: @user).consultation_notification.deliver_later
+          ConsultationConfirmationMailer.with(consultation: @consultation).consultation_confirmation.deliver_later
         end
 
-        format.html { redirect_to root_url, notice: "Your consultation was successfully scheduled." }
+        format.html { redirect_to "/confirmation", notice: "Your consultation was successfully scheduled." }
         format.json { render :show, status: :created, location: @consultation }
       else
         format.html { render :new, status: :unprocessable_entity }
