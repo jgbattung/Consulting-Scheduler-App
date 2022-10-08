@@ -31,10 +31,12 @@ class ConsultationsController < ApplicationController
 
     respond_to do |format|
       if @consultation.save
+        @user = @consultation.consultation_type.user
 
         unless @consultation_type.payment_required?
           @consultation.approved!
           ConsultationNotificationMailer.with(user: @user).consultation_notification.deliver_later
+          ConsultationConfirmationMailer.with(consultation: @consultation).consultation_confirmation.deliver_later
         end
 
         format.html { redirect_to "/confirmation", notice: "Your consultation was successfully scheduled." }
