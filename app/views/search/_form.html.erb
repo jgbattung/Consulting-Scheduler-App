@@ -1,0 +1,4 @@
+<%= search_form_for(@query, url: search_path, method: :get) do |f| %>
+	<%= f.search_field :first_name_or_last_name_or_specialization_i_cont_any, placeholder: "Search...", class: input_class %>
+	<%= f.submit "Search!", class: button_class(theme: 'primary') %>
+<% end %>

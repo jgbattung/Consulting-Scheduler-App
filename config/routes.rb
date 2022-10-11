@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       mount Sidekiq::Web => '/sidekiq'
     end
 
-
+  get 'search', to: 'search#index'
   devise_for :users
 
   resources :users, only: [:index]
