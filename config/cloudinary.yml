@@ -1,0 +1,9 @@
+development:
+  cloud_name: "dnx3ptofg"
+  api_key: "416951578749519"
+  api_secret: "Ol4G_ouVy3z0HTGX35dOjH4p0Kw"
+
+production:
+  cloud_name: "dnx3ptofg"
+  api_key: "416951578749519"
+  api_secret: "Ol4G_ouVy3z0HTGX35dOjH4p0Kw"

@@ -6,6 +6,7 @@ has_person_name
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  mount_uploader :image, ImgUploader
   has_many :consultation_types
 
   validates :consultation_link, :specialization, presence: true
