@@ -14,67 +14,70 @@
 
 	<% if @consultations.pending.any? %>
 		<h3 class="font-bold text-2xl mb-6 mt-10 pt-10 border-t border-slate-2">Pending Consultations</h3>
+		<div class="overflow-x-auto">
+			<table class="w-full table-collapse">
+				<thead>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Status</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Name</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Email</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Starts</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Ends</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Consultation Type</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Premium</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Paid</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50"></th>
+				</thead>
 
-		<table class="w-full table-collapse">
-			<thead>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Status</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Name</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Email</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Starts</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Ends</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Consultation Type</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Premium</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Paid</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50"></th>
-			</thead>
-
-			<tbody>
-				<%= render @consultations.pending %>
-			</tbody>
-		</table>
+				<tbody>
+					<%= render @consultations.pending %>
+				</tbody>
+			</table>
+		</div>
 	<% end %>
 
 	<% if @consultations.approved.any? %>
 		<h3 class="font-bold text-2xl mb-6 mt-10 pt-10 border-t border-slate-2">Scheduled Consultations</h3>
+		<div class="overflow-x-auto">
+			<table class="w-full table-collapse">
+				<thead>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Status</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Name</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Email</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Starts</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Ends</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Consultation Type</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Premium</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Paid</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50"></th>
+				</thead>
 
-		<table class="w-full table-collapse">
-			<thead>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Status</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Name</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Email</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Starts</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Ends</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Consultation Type</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Premium</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Paid</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50"></th>
-			</thead>
-
-			<tbody>
-				<%= render @consultations.approved %>
-			</tbody>
-		</table>
+				<tbody>
+					<%= render @consultations.approved %>
+				</tbody>
+			</table>
+		</div>
 	<% end %>
 
 	<% if @consultations.unapproved.any? %>
 		<h3 class="font-bold text-2xl mb-6 mt-10 pt-10 border-t border-slate-2">Unapproved Consultations</h3>
+		<div class="overflow-x-auto">
+			<table class="w-full table-collapse">
+				<thead>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Status</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Name</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Email</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Starts</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Ends</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Consultation Type</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Premium</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50">Paid</th>
+					<th class="border border-sky-700 p-3 text-left bg-sky-50"></th>
+				</thead>
 
-		<table class="w-full table-collapse">
-			<thead>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Status</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Name</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Email</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Starts</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Ends</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Consultation Type</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Premium</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50">Paid</th>
-				<th class="border border-sky-700 p-3 text-left bg-sky-50"></th>
-			</thead>
-
-			<tbody>
-				<%= render @consultations.unapproved %>
-			</tbody>
-		</table>
+				<tbody>
+					<%= render @consultations.unapproved %>
+				</tbody>
+			</table>
+		</div>
 	<% end %>
 </div>
