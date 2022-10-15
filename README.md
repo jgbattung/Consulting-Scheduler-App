@@ -18,3 +18,10 @@
 * Clients can see a list of all available consultants and can also use the search function to look for a consultant using their name or specialization
 * Clients can book a free or paid consultation via the Consultant's consultation link
 * Once a Client books a consultation, they will receive a confirmation email with the details of the consultation
+
+Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
