@@ -21,6 +21,22 @@
 
 ## Version
 ```
-* Ruby 3.1.2
-* Rails 7.0.4
+Ruby 3.1.2
+Rails 7.0.4
+```
+
+## Setup
+```
+$ bundle install
+$ rails db:setup
+```
+
+## Starting the app
+```
+$ rails s
+```
+
+## Running the test suite
+```
+$ rspec
 ```
