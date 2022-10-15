@@ -19,9 +19,8 @@
 * Clients can book a free or paid consultation via the Consultant's consultation link
 * Once a Client books a consultation, they will receive a confirmation email with the details of the consultation
 
-Some basic Git commands are:
+## Version
 ```
-git status
-git add
-git commit
+* Ruby 3.1.2
+* Rails 7.0.4
 ```
