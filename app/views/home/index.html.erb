@@ -14,8 +14,10 @@
     <p class="text-white font-medium text-sm pt-10 md:text-base lg:text-lg md:pt-7 lg:pt-12">Looking to connect with clients?</h1><span class="text-amber-400 hover:text-amber-600 transition:all"> <%= link_to "Create a Consultant Account.", new_user_registration_path %></span>
   </div>
 
-  <div class="hidden lg:flex">
-    <h2>IMAGE HERE</h2>
+  <div class="hidden lg:flex text-left">
+    <div class="hidden lg:flex">
+      <%= image_tag("hero.png", :size => "288x360", :alt => "consulting image") %>
+    </div>
   </div>
   
 </div>
