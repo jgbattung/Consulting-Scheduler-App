@@ -34,6 +34,7 @@ $ rails db:setup
 ## Starting the app
 ```
 $ rails s
+Open localhost:3000
 ```
 
 ## Running the test suite
