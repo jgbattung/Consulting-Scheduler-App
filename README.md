@@ -2,14 +2,19 @@
 
 ## Features
 
-* There are 2 types of users in this app, Consultants and Clients
-* Consultants need to register an account to gain access to the features of the app
-* Upon registering, Consultants get a personalized consultation link that they can send to their Clients
-* Consultants create consultation types for their services by providing the details and duration of the consultation, and whether if it is free or paid
+### As a Consultant
+
+* Consultants can create a Consultant Account where they can access the app's features
+* During account registration, consultants will get a personalized consultation link that they can send to their Clients
+* Consultants can create and edit consultation types for their services by providing the details and duration of the consultation, and whether if it is free or paid
 * Consultants can view a list of all consultations booked by all Clients
-* Paid consultations are approved manually once payment has been confirmed
-* Payment is handled via the Stripe API
-* Through the boooking link, Users can view a list of consultations offered by a Consultant
-* Users can select a consultation they wish to get, enter their personal information and provide their payment details (if necessary)
-* Users do not have to register for an account to book a consultation
-* For now, paid consultations can only be booked and paid for by US citizens
+* Consultants can manually approve and unapprove consultations booked by Clients
+* Paid consultations are autaomatically approved once payment is verified by Stripe
+* Once a Client books a consultation, the Consultant will receive a notification email
+
+### As a Client
+
+* Clients do not need to create an account to access the app's features
+* Clients can see a list of all available consultants and can also use the search function to look for a consultant using their name or specialization
+* Clients can book a free or paid consultation via the Consultant's consultation link
+* Once a Client books a consultation, they will receive a confirmation email with the details of the consultation
