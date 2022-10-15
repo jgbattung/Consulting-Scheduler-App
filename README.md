@@ -44,3 +44,7 @@ $ rspec
 ## Screens
 ### Homepage
 ![homepage](https://user-images.githubusercontent.com/100396329/195965807-07c7d598-d0b7-483d-b80c-f0a6df2c5b85.jpg)
+
+## Create Consultant Account
+![image](https://user-images.githubusercontent.com/100396329/195965850-503b2146-9009-4795-ac18-d23b6aba299e.png)
+
