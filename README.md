@@ -48,3 +48,8 @@ $ rspec
 ## Create Consultant Account
 ![create_account](https://user-images.githubusercontent.com/100396329/195965878-e6facd75-2ab2-4873-b5c7-e1700ca50dbc.png)
 
+## Consultant Dashboard
+![consultant-dashboard](https://user-images.githubusercontent.com/100396329/195965936-c8e8e3d2-6c48-4cfa-8792-5684289a1659.jpg)
+![consultant-dashboard-index](https://user-images.githubusercontent.com/100396329/195965941-dd43de7d-8e05-4de7-99c9-a39cba49d463.jpg)
+
+
