@@ -1,5 +1,7 @@
 # FirstClass - The consulting scheduler app
 
+[View the app on heroku](https://consulting-scheduler.herokuapp.com/)
+
 ## Overview
 This web app was created as a one-stop online destination for professionals and the public to find and meet with each other. It allows professionals to offer their services and display them on their personalized consultation links, while the puiblic can access these pages or search for specific professionals they with to consult with and book a consultation with them.   
 
