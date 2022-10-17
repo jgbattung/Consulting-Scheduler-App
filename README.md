@@ -2,8 +2,11 @@
 
 [View the app on heroku](https://consulting-scheduler.herokuapp.com/)
 <br>
+<br>
 **Test Consultant Account**
+<br>
 email: `coachjireh@example.com`
+<br>
 password: `123456`
 
 ## Overview
