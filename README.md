@@ -1,4 +1,4 @@
-# Consulting Scheduler App
+# FirstClass - The consulting scheduler app
 
 ## Features
 
