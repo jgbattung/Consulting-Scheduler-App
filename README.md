@@ -13,7 +13,7 @@ This web app was created as a one-stop online destination for professionals and 
 * Consultants can create and edit consultation types for their services by providing the details and duration of the consultation, and whether if it is free or paid
 * Consultants can view a list of all consultations booked by all Clients
 * Consultants can manually approve and unapprove consultations booked by Clients
-* Paid consultations are autaomatically approved once payment is verified by Stripe
+* Paid consultations are automatically approved once payment is verified by Stripe
 * Once a Client books a consultation, the Consultant will receive a notification email
 
 ### As a Client
