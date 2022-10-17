@@ -1,6 +1,7 @@
 # FirstClass - The consulting scheduler app
 
 [View the app on heroku](https://consulting-scheduler.herokuapp.com/)
+<br>
 **Test Consultant Account**
 email: `coachjireh@example.com`
 password: `123456`
